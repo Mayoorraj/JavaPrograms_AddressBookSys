@@ -11,6 +11,7 @@ public class AddressFunctions {
 
     //  method for adding contact details
     public void addContact() {
+        System.out.println("Adding a new contact details in this address book..");
         addressDetails = new AddressDetails();
         System.out.println("Enter the first name : ");
         String firstName = sc.nextLine();

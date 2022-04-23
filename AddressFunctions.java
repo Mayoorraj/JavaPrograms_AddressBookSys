@@ -11,7 +11,7 @@ public class AddressFunctions {
 
     //  method for adding contact details
     public void addContact() {
-        System.out.println("Adding a new contact details in this address book..");
+        System.out.println("Adding/editing a contact details in this address book..");
         addressDetails = new AddressDetails();
         System.out.println("Enter the first name : ");
         String firstName = sc.nextLine();
@@ -37,5 +37,21 @@ public class AddressFunctions {
         addressDetails.setPincode(pincode);
         addressDetails.setEmail(email);
         System.out.println(addressDetails);
+    }
+//  editing the exisitng address
+    public void editContact() {
+        System.out.println("Please Enter the first name of a contact person to edit : ");
+        String editName = sc.nextLine();
+
+        if (editName.equalsIgnoreCase(addressDetails.getFirstName())) {
+            System.out.println("Found a contact stored with this name..");
+            addContact();
+        }
+        else {
+            System.out.println("Please check the spelling, Invalid first name" +
+                    "\nthe name you entered does not match with any names in address book " +
+                    "\nTry again..");
+            editContact();
+        }
     }
 }

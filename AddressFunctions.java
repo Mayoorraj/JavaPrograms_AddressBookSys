@@ -1,12 +1,15 @@
 package com.bridgelabz.assignment9.AddressBook;
-
+/*
+ *@author Mayoor
+ */
 import java.util.Scanner;
 
 public class AddressFunctions {
-
+    //  created an object of Addressdetails
     AddressDetails addressDetails;
     Scanner sc = new Scanner(System.in);
 
+    //  method for adding contact details
     public void addContact() {
         addressDetails = new AddressDetails();
         System.out.println("Enter the first name : ");
@@ -24,7 +27,8 @@ public class AddressFunctions {
         System.out.println("Enter Email id : ");
         String email = sc.nextLine();
 
-        addressDetails.setFirstName (firstName);
+//  implementing setters for creating fields in a contact
+        addressDetails.setFirstName(firstName);
         addressDetails.setLastName(lastName);
         addressDetails.setPhoneNumber(phoneNumber);
         addressDetails.setCity(city);
@@ -32,9 +36,9 @@ public class AddressFunctions {
         addressDetails.setPincode(pincode);
         addressDetails.setEmail(email);
         System.out.println(addressDetails);
-
     }
 
+    //  method to display a contact as its first name
     public void display() {
         String str = addressDetails.getFirstName();
         System.out.println("str = " + str);

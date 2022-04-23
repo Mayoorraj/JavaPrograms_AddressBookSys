@@ -80,14 +80,13 @@ public class AddressDetails {
 //    to string to return precise values
     @Override
     public String toString() {
-        return "Contact details {" +
-                "\nFirst Name: " + firstName + "\n" +
-                "\nLast Name: " + lastName + "\n" +
-                "\nPhone No.: " + phoneNumber + "\n" +
-                "\nEmail: " + email + "\n" +
-                "\nCity: " + city + "\n" +
-                "\nState: " + state + "\n" +
-                "\nPincode: " + pincode + "\n" +
-                '}';
+        return
+                "\nFirst Name: " + firstName +
+                "\nLast Name: " + lastName +
+                "\nPhone No.: " + phoneNumber +
+                "\nEmail: " + email +
+                "\nCity: " + city  +
+                "\nState: " + state +
+                "\nPincode: " + pincode ;
     }
 }

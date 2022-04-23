@@ -10,6 +10,7 @@ public class AddressDetails {
     private String state;
     private String pincode;
 
+//    constructor to initialise an objects
     public AddressDetails() {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -19,6 +20,7 @@ public class AddressDetails {
         this.state = state;
         this.pincode = pincode;
     }
+//    getters and setters for each contact field
     public String getFirstName() {
         return firstName;
     }
@@ -74,18 +76,18 @@ public class AddressDetails {
     public void setPincode(String pincode) {
         this.pincode = pincode;
     }
+
+//    to string to return precise values
     @Override
     public String toString() {
-        return "AddressDetails{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", email='" + email + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                ", pincode='" + pincode + '\'' +
+        return "Contact details {" +
+                "\nFirst Name: " + firstName + "\n" +
+                "\nLast Name: " + lastName + "\n" +
+                "\nPhone No.: " + phoneNumber + "\n" +
+                "\nEmail: " + email + "\n" +
+                "\nCity: " + city + "\n" +
+                "\nState: " + state + "\n" +
+                "\nPincode: " + pincode + "\n" +
                 '}';
     }
-
-
 }

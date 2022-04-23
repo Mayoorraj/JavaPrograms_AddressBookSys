@@ -40,7 +40,8 @@ public class AddressFunctions {
 
     //  method to display a contact as its first name
     public void display() {
-        String str = addressDetails.getFirstName();
-        System.out.println("str = " + str);
+        String first = addressDetails.getFirstName();
+        String last = addressDetails.getLastName();
+        System.out.println("These are the details for " + first+" "+ last);
     }
 }

@@ -7,13 +7,18 @@ public class Main {
         System.out.println("Welcome to Address Book Management System..!");
         AddressFunctions contact = new AddressFunctions();
         contact.addContact();
-        System.out.println("Do you want to edit the contacts ? \nYes/No");
+
+        System.out.println("Do you want to edit or delete contacts ? \nEdit/Delete");
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
-        if (input.equals("yes") || input.equals("Yes")|| input.equalsIgnoreCase("Y")) {
+        if (input.equalsIgnoreCase("E")|| input.equalsIgnoreCase("edit")){
             contact.editContact();
-        } else {
-            System.out.println("Thank you..! ");
+        }
+        else if (input.equalsIgnoreCase("D")||input.equalsIgnoreCase("delete")) {
+            contact.deleteContact();
+        }
+        else {
+            System.out.println(" Thank you..! ");
         }
     }
 }

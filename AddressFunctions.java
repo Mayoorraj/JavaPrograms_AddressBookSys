@@ -37,11 +37,4 @@ public class AddressFunctions {
         addressDetails.setEmail(email);
         System.out.println(addressDetails);
     }
-
-    //  method to display a contact as its first name
-    public void display() {
-        String first = addressDetails.getFirstName();
-        String last = addressDetails.getLastName();
-        System.out.println("These are the details for " + first+" "+ last);
-    }
 }

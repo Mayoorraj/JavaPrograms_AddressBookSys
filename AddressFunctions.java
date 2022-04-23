@@ -23,9 +23,9 @@ public class AddressFunctions {
         String city = sc.nextLine();
         System.out.println("Enter the state : ");
         String state = sc.nextLine();
-        System.out.println("Enter the pincode : ");
+        System.out.println("Enter the Pin code : ");
         String pincode = sc.nextLine();
-        System.out.println("Enter Email id : ");
+        System.out.println("Enter an Email id : ");
         String email = sc.nextLine();
 
 //  implementing setters for creating fields in a contact
@@ -38,20 +38,41 @@ public class AddressFunctions {
         addressDetails.setEmail(email);
         System.out.println(addressDetails);
     }
-//  editing the exisitng address
+//  editing the exisitng contact
     public void editContact() {
         System.out.println("Please Enter the first name of a contact person to edit : ");
         String editName = sc.nextLine();
 
         if (editName.equalsIgnoreCase(addressDetails.getFirstName())) {
-            System.out.println("Found a contact stored with this name..");
+            System.out.println("Found a contact stored with this name!");
             addContact();
         }
         else {
-            System.out.println("Please check the spelling, Invalid first name" +
-                    "\nthe name you entered does not match with any names in address book " +
+            System.out.println("Please check the spelling, Invalid first name.." +
+                    "\nThe name you entered does not match with any names in address book " +
                     "\nTry again..");
             editContact();
+        }
+    }
+//   Deleting a contact
+    public void deleteContact() {
+        System.out.println("Enter first name of a contact :");
+        String deleteName = sc.next();
+
+        if (deleteName.equals(addressDetails.getFirstName())) {
+            addressDetails.setFirstName(null);
+            addressDetails.setLastName(null);
+            addressDetails.setPhoneNumber(null);
+            addressDetails.setCity(null);
+            addressDetails.setState(null);
+            addressDetails.setPincode(null);
+            addressDetails.setEmail(null);
+            System.out.println("Deletion is successful!");
+        }
+        else {
+            System.out.println("Invalid first name, Spelling might be incorrect.." +
+                    "\nplease try again..");
+            deleteContact();
         }
     }
 }
